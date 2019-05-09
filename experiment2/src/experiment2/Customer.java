@@ -25,7 +25,8 @@ public class Customer extends Thread {
                 try {
                     int time=(int)(1+Math.random()*10);
                     System.out.println("No."+num+" 消费者消费中并读出缓冲区，用时"+time+"s");
-                    buffer.wait(time * 100);
+                    sleep(time*10);
+                    buffer.wait();
                 }catch (Exception e){
                     e.printStackTrace();
                 }
