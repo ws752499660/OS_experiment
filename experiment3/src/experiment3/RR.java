@@ -19,7 +19,7 @@ public class RR {
         this.time=0;
         this.flag=0;
         this.index=0;
-        this.qFlag=1;
+        this.qFlag=0;
         Scanner scanner=new Scanner(System.in);
         System.out.println("请输入RR的时间片大小q：");
         this.q=scanner.nextInt();
@@ -27,64 +27,48 @@ public class RR {
 
     public void run(){
         while(flag<processList.getN()){
-            if(index<processList.getN()) {
-                if (processList.list.get(index).getArrivalTime() >= time) {
-                    putToWaiting(processList.list.get(index));
-                    index++;
-                }
-            }
-            doProcess(waitingList.get(0));
+            putToWaiting();
             time++;
+            doProcess(waitingList.get(0));
         }
         processList.endRun();
     }
 
-    private void putToWaiting(Process process){
-        waitingList.add(process);
+    private void putToWaiting(){
+        if(index<processList.getN()) {
+            if (processList.list.get(index).getArrivalTime() >= time) {
+                waitingList.add(processList.list.get(index));
+                index++;
+            }
+        }
     }
 
     private void doProcess(Process process){
-        if(time==0)
-            return;
+        int leftTime=process.doOneSec();
         qFlag++;
-        if(process.doOneSec()>0) {
-            if (time % q == 0) {
-                waitingList.remove(0);
-                waitingList.add(process);
+        if(leftTime>0) {
+            if (qFlag == q) {
+                removeToEnd(process);
+                qFlag=0;
             }
-            System.out.println("正在执行进程"+process.getArrivalTime());
+            System.out.println("进程"+process.getArrivalTime()+"正在运行");
         }
-        else if(process.doOneSec()==0) {
+        else if(leftTime==0) {
             process.setFinishTime(time);
             waitingList.remove(0);
             flag++;
-            qFlag=1;
+            qFlag=0;
             System.out.println("进程"+process.getArrivalTime()+"运行结束");
         }
-        if(qFlag==2)
-            qFlag=1;
     }
 
-//    private void doProcess(Process process){
-//        if(time%q==0 && time!=0) {
-//            int leftTime = process.getAndComputeLeftTime(q);
-//            if (leftTime == 0) {
-//                waitingList.remove(0);
-//                flag++;
-//                process.setFinishTime(time);
-//            } else if (leftTime < 0) {
-//                time = time + leftTime;
-//                waitingList.remove(0);
-//                process.setFinishTime(time);
-//                flag++;
-//            } else {
-//                waitingList.add(process);
-//                waitingList.remove(0);
-//            }
-//        }
-//        time++;
-//    }
-
-
-
+    private void removeToEnd(Process process){
+        if(index<processList.getN()) {
+            if (processList.list.get(index).getArrivalTime() == time) {
+                putToWaiting();
+            }
+        }
+        waitingList.remove(0);
+        waitingList.add(process);
+    }
 }
