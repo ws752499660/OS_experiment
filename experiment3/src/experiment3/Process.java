@@ -7,6 +7,7 @@ public class Process{
     private int finishTime;
     private int wholeTime;
     private double weightWT;
+    private double priority;
 
     public Process(){
         arrivalTime=0;
@@ -15,6 +16,26 @@ public class Process{
         finishTime=-1;
         wholeTime=-1;
         weightWT=0;
+        priority=1;
+    }
+
+    public int doOneSec(){
+        leftTime--;
+        return leftTime;
+    }
+
+    public void calculateNums(){
+        wholeTime=finishTime-arrivalTime;
+        weightWT=(double)wholeTime/serviceTime;
+    }
+
+    public void calculatePri(int time){
+        if(finishTime>0) {
+            priority=1;
+            return;
+        }
+        if(time>=arrivalTime)
+            priority=1+(double) (time-arrivalTime)/serviceTime;
     }
 
     public void setArrivalTime(int arrivalTime) {
@@ -26,24 +47,6 @@ public class Process{
         this.leftTime=serviceTime;
     }
 
-    public int doOneSec(){
-        leftTime--;
-        return leftTime;
-    }
-
-//    public int getAndComputeLeftTime(int q){
-//        if(leftTime-q>=0)
-//        {
-//            leftTime=leftTime-q;
-//            return leftTime;
-//        }
-//        else
-//        {
-//            leftTime=0;
-//            return leftTime-q;
-//        }
-//    }
-
     public void setFinishTime(int finishTime) {
         this.finishTime = finishTime;
     }
@@ -52,9 +55,8 @@ public class Process{
         return arrivalTime;
     }
 
-    public void calculateNums(){
-        wholeTime=finishTime-arrivalTime;
-        weightWT=wholeTime/serviceTime;
+    public double getPriority() {
+        return priority;
     }
 
     public int getLeftTime() {
@@ -71,5 +73,9 @@ public class Process{
 
     public double getWeightWT() {
         return weightWT;
+    }
+
+    public int getServiceTime() {
+        return serviceTime;
     }
 }

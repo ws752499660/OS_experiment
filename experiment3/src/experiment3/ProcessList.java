@@ -50,6 +50,12 @@ public class ProcessList {
         }
         averageWT=averageWT/n;
         averageWWT=averageWWT/n;
+        Collections.sort(this.list, new Comparator<Process>() {
+            @Override
+            public int compare(Process o1, Process o2) {
+                return o1.getArrivalTime()-o2.getArrivalTime();
+            }
+        });
         System.out.println("完成时间为：");
         for (int i=0;i<n;i++){
             System.out.print(list.get(i).getFinishTime()+" ");
@@ -67,5 +73,17 @@ public class ProcessList {
         System.out.println();
         System.out.println("平均周转时间为："+averageWT);
         System.out.println("平均带权周转时间为："+averageWWT);
+    }
+
+    public void refleshAllPri(int time){
+        for(int i=0;i<n;i++){
+            list.get(i).calculatePri(time);
+        }
+        Collections.sort(this.list, new Comparator<Process>() {
+            @Override
+            public int compare(Process o1, Process o2) {
+                return (int)(o2.getPriority()-o1.getPriority());
+            }
+        });
     }
 }
