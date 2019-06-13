@@ -13,6 +13,7 @@ public class Producer extends Thread {
     public void run() {
         synchronized(buffer) {
             while (true) {
+                buffer.notifyAll();
                 while (buffer.isFull()){
                     try {
                         System.out.println("No."+num+" 生产者等待生产因为缓冲区已满");

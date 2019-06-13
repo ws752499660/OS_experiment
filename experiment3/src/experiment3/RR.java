@@ -51,14 +51,14 @@ public class RR {
                 removeToEnd(process);
                 qFlag=0;
             }
-            System.out.println("进程"+process.getArrivalTime()+"正在运行");
+//            System.out.println("进程"+process.getArrivalTime()+"正在运行");
         }
         else if(leftTime==0) {
             process.setFinishTime(time);
             waitingList.remove(0);
             flag++;
             qFlag=0;
-            System.out.println("进程"+process.getArrivalTime()+"运行结束");
+//            System.out.println("进程"+process.getArrivalTime()+"运行结束");
         }
     }
 

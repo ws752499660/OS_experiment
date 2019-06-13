@@ -42,7 +42,8 @@ public class CSCAN extends DiskManager {
                 trackSeq.add(trackNum.get(i));
             }
         }
-        for (i = trackNum.size()-trackSeq.size()-1; i>=0; i--) {
+        int midFlag=trackNum.size()-trackSeq.size();
+        for (i = 0; i<midFlag; i++) {
             pathLength.add(Math.abs(pointer-trackNum.get(i)));
             pointer = trackNum.get(i);
             trackSeq.add(trackNum.get(i));
@@ -50,4 +51,3 @@ public class CSCAN extends DiskManager {
         printRes();
     }
 }
-

@@ -25,7 +25,7 @@ public class HRRN {
         process.setFinishTime(time+process.getServiceTime());
         process.calculateNums();
         time=time+process.getServiceTime();
-        System.out.println(time+"时刻，"+process.getArrivalTime()+"进程运行");
+//        System.out.println(time+"时刻，"+process.getArrivalTime()+"进程运行");
         flag++;
     }
 

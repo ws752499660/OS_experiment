@@ -13,6 +13,7 @@ public class Customer extends Thread {
     public void run() {
         synchronized (buffer){
             while (true){
+                buffer.notifyAll();
                 while (buffer.isEmpty()){
                     try {
                         System.out.println("No."+num+" 消费者等待消费因为缓冲区为空");

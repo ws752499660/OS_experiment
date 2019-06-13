@@ -41,7 +41,7 @@ public class LRU extends MemoryManager {
         while (seqPointer<pageSeq.size()){
             addToMem();
             seqPointer++;
-            memory.logStates();
+//            memory.logStates();
         }
         printRes();
     }

@@ -31,11 +31,11 @@ public class Process{
 
     public void calculatePri(int time){
         if(finishTime>0) {
-            priority=1;
+            priority=1; //以及执行过的将响应比设为1
             return;
         }
         if(time>=arrivalTime)
-            priority=1+(double) (time-arrivalTime)/serviceTime;
+            priority=1+(double) (time-arrivalTime)/serviceTime; //将响应比人为加1确保未执行的响应比始终比执行过的大
     }
 
     public void setArrivalTime(int arrivalTime) {
