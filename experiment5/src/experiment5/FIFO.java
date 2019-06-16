@@ -16,7 +16,7 @@ public class FIFO extends MemoryManager {
         while (seqPointer<pageSeq.size()){
             addToMem();
             seqPointer++;
-//            memory.logStates();
+            memory.logStates();
         }
         printRes();
     }

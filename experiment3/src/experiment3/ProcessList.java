@@ -68,11 +68,11 @@ public class ProcessList {
         System.out.println();
         System.out.println("带权周转时间为：");
         for (int i=0;i<n;i++){
-            System.out.print(list.get(i).getWeightWT()+" ");
+            System.out.print(String.format("%.2f",list.get(i).getWeightWT())+" ");
         }
         System.out.println();
-        System.out.println("平均周转时间为："+averageWT);
-        System.out.println("平均带权周转时间为："+averageWWT);
+        System.out.println("平均周转时间为："+String.format("%.2f",averageWT));
+        System.out.println("平均带权周转时间为："+String.format("%.2f",averageWWT));
     }
 
     public void refleshAllPri(int time){

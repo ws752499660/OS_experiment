@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31371a5a-73a5-4490-b93d-07e7ec719466" name="Default Changelist" comment="" />
+    <list default="true" id="31371a5a-73a5-4490-b93d-07e7ec719466" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../experiment1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../experiment3/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment1/out/production/experiment1/processScheduling/ProcessesArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment1/out/production/experiment1/processScheduling/ProcessesArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment1/src/processScheduling/ProcessesArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment1/src/processScheduling/ProcessesArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment3/out/production/experiment3/experiment3/ProcessList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment3/out/production/experiment3/experiment3/ProcessList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../experiment3/src/experiment3/ProcessList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../experiment3/src/experiment3/ProcessList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experiment3/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/experiment3/Manager.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/experiment3/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
+            <state relative-caret-position="144">
               <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
@@ -26,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/experiment3/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+            <state relative-caret-position="-142">
+              <caret line="34" column="82" lean-forward="true" selection-start-line="34" selection-start-column="82" selection-end-line="34" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/experiment3/Process.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-284">
+            <state relative-caret-position="-262">
               <caret column="15" selection-start-column="15" selection-end-column="15" />
               <folding>
                 <element signature="e#643#644#0" expanded="true" />
@@ -81,8 +93,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,12 +115,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560654137760" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../experiment5" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
@@ -158,16 +172,17 @@
       <workItem from="1560384827387" duration="24000" />
       <workItem from="1560384983291" duration="11000" />
       <workItem from="1560385288798" duration="2298000" />
+      <workItem from="1560653187946" duration="1284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10777000" />
+    <option name="totallyTimeSpent" value="12061000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2726684" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27628756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -176,7 +191,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.57222223" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.63666666" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -220,14 +235,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/experiment3/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="144">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/experiment3/Process.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
+        <state relative-caret-position="-262">
           <caret column="15" selection-start-column="15" selection-end-column="15" />
           <folding>
             <element signature="e#643#644#0" expanded="true" />
@@ -238,8 +253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/experiment3/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+        <state relative-caret-position="-142">
+          <caret line="34" column="82" lean-forward="true" selection-start-line="34" selection-start-column="82" selection-end-line="34" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

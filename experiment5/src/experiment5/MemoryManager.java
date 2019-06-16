@@ -35,7 +35,7 @@ public abstract class MemoryManager {
 
     private void outputRes(){
         System.out.println("缺页次数为"+leakTimes);
-        System.out.println("缺页率为"+leakRate);
+        System.out.println("缺页率为"+String.format("%.2f",leakRate));
     }
 
     void printRes(){

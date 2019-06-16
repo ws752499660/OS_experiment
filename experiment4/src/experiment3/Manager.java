@@ -32,10 +32,28 @@ public class Manager {
 
     public void run(){
         int i=0;
+        System.out.println("进程"+"   "+"work"+"    "+"allocation"+"  "+"Need"+"    "+"work+allocation");
         while (true){
             Process process=processList.get(i);
             if(isAMoreThanB(available,process.getNeed()) && !process.isFinish()){
+                System.out.print(process.getName()+"    ");
+                for (int t:available) {
+                    System.out.print(t+" ");
+                }
+                System.out.print("   ");
+                for (int t:process.getAllocation()) {
+                    System.out.print(t+" ");
+                }
+                System.out.print("   ");
+                for (int t:process.getNeed()) {
+                    System.out.print(t+" ");
+                }
+                System.out.print("   ");
                 allocate(processList.get(i));
+                for (int t:available) {
+                    System.out.print(t+" ");
+                }
+                System.out.println();
                 i=0;
             }else {
                 i++;

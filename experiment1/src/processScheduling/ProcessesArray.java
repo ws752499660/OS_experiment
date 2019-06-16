@@ -1,5 +1,6 @@
 package processScheduling;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class ProcessesArray {
@@ -96,16 +97,16 @@ public class ProcessesArray {
         System.out.println();
         System.out.println("带权周转时间:");
         for(int i=0;i<num;i++){
-            System.out.print(processes[i].getWeightWholeTime()+"   ");
+            System.out.print(String.format("%.2f",processes[i].getWeightWholeTime())+"   ");
         }
         System.out.println();
         if(method==1) {
-            System.out.println("平均周转时间:" +averageWT_FCFS);
-            System.out.println("平均带权周转时间:"+averageWWT_FCFS);
+            System.out.println("平均周转时间:" +(String.format("%.2f",averageWT_FCFS)));
+            System.out.println("平均带权周转时间:"+(String.format("%.2f",averageWWT_FCFS)));
         }
         if(method==2){
-            System.out.println("平均周转时间:" +averageWT_SJF);
-            System.out.println("平均带权周转时间:"+averageWWT_SJF);
+            System.out.println("平均周转时间:" +(String.format("%.2f",averageWT_SJF)));
+            System.out.println("平均带权周转时间:"+(String.format("%.2f",averageWWT_SJF)));
         }
     }
 }
